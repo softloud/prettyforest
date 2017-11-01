@@ -15,8 +15,7 @@ knitr::opts_chunk$set(
 # prettyforest
 
 The goal of prettyforest is to produce `ggplot` forest plots from `metafor`-generated meta-anlaysis models.
-
-## Installation
+l## Installation
 
 You can install prettyforest from github with:
 
