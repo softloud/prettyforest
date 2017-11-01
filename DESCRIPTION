@@ -1,0 +1,9 @@
+Package: prettyforest
+Title: Forest Plots in `ggplot`
+Version: 0.0.0.9000
+Authors@R: person("Charles", "Gray", email = "C.Gray@latrobe.edu.au", role = c("aut", "cre"))
+Description: Bring together what Cap'n likes about RevMan and `metafor`.
+Depends: R (>= 3.4.2)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
