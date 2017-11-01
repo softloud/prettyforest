@@ -1,0 +1,41 @@
+---
+title: "Example data"
+author: "Trouble"
+date: "01/11/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+Standardized mean difference is the most common measure of effect in meta-analyses. 
+
+```{r }
+example_ma <- data("dat.normand1999", package = "metafor") %>% # Get an example dataset.
+  get() %>% # NB: slab (i.e., study) := "source".
+  metafor::escalc( # Calculate effect.
+    measure = "SMD",
+    n1i = n1i,
+    m1i =m1i,
+    sd1i = sd1i,
+    n2i = n2i,
+    m2i = m2i,
+    sd2i = sd2i,
+    data = .
+  ) %>% 
+  metafor::rma( # Meta-analyse!
+    slab = source
+  ) 
+
+# Check all is as it should be.
+example_ma %>% 
+  metafor::forest()
+
+# Update package.
+devtools::use_data(example_ma, overwrite = T)
+```
+
+
+
