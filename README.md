@@ -3,10 +3,7 @@
 prettyforest
 ============
 
-The goal of prettyforest is to produce `ggplot` forest plots from `metafor`-generated meta-anlaysis models.
-
-Installation
-------------
+The goal of prettyforest is to produce `ggplot` forest plots from `metafor`-generated meta-anlaysis models. l\#\# Installation
 
 You can install prettyforest from github with:
 
